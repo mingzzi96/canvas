@@ -1,2 +1,2 @@
-# image_gallery
-make image gallery
+# Canvas
+make canvas
