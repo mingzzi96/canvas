@@ -7945,7 +7945,7 @@
   font-size: 25px;
 }
 
-.container .brushPanel {
+.container .brushpannel {
   background: #535353;
   flex-direction: column;
   justify-content: center;
@@ -7970,7 +7970,7 @@
   right: 15px;
 }
 
-.brushPanel.hide, .imgNav.hide {
+.brushpannel.hide, .imgNav.hide {
   display: none;
 }
 
@@ -7978,13 +7978,13 @@
   color: #dcdcdc;
 }
 
-.container .brushPanel label {
+.container .brushpannel label {
   color: #dcdcdc;
   font-size: 11px;
   font-weight: 700;
 }
 
-.container .brushPanel .brushSizeLabel {
+.container .brushpannel .brushSizeLabel {
   position: relative;
   left: -40px;
 }
@@ -7995,13 +7995,13 @@
   margin: auto;
 }
 
-.container .brushPanel input.brushSize[type="range"] {
+.container .brushpannel input.brushSize[type="range"] {
   width: 200px;
   position: relative;
   left: -40px;
 }
 
-.container .brushPanel .brushSizePreviewContainer {
+.container .brushpannel .brushSizePreviewContainer {
   background: inherit;
   justify-content: center;
   align-items: center;
@@ -8012,7 +8012,7 @@
   right: 0;
 }
 
-.container .brushPanel .brushSizePreviewContainer label.brushSizePreview {
+.container .brushpannel .brushSizePreviewContainer label.brushSizePreview {
   background: #e53935;
   border-radius: 50%;
   width: 10px;
