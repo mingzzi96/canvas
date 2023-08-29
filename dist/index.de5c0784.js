@@ -24,6 +24,7 @@ class DrawingBoard {
         this.navigatorImageContainerEl = this.containerEl.querySelector("#imgNav");
         this.navigatorImageEl = this.navigatorImageContainerEl.querySelector("#canvasImg");
         this.undoEl = this.toolbarEl.querySelector("#undo");
+        this.clearEl = this.toolbarEl.querySelector("#clear");
     }
     initContext() {
         this.context = this.canvasEl.getContext("2d");
@@ -43,6 +44,13 @@ class DrawingBoard {
         this.eraserEl.addEventListener("click", this.onClickEraser.bind(this));
         this.navigatorEl.addEventListener("click", this.onClickNavigator.bind(this));
         this.undoEl.addEventListener("click", this.onClickUndo.bind(this));
+        this.clearEl.addEventListener("click", this.onClickClear.bind(this));
+    }
+    onClickClear() {
+        this.context.clearRect(0, 0, this.canvasEl.width, this.canvasEl.height);
+        this.undoArray = [];
+        this.updateNavigator();
+        this.initCanvasBackgroundColor();
     }
     onClickUndo() {
         if (this.undoArray.length === 0) {
@@ -56,6 +64,7 @@ class DrawingBoard {
             this.context.drawImage(previousImage, 0, 0, this.canvasEl.width, this.canvasEl.height, 0, 0, this.canvasEl.width, this.canvasEl.height);
         };
         previousImage.src = previousDataUrl;
+        this.updateNavigator();
     }
     saveState() {
         if (this.undoArray.length > 4) {
