@@ -4,6 +4,21 @@ class DrawingBoard {
     eraserColor = "#FFFFFF";
     backgroundColor = "#FFFFFF";
     undoArray = [];
+    containerEl;
+    canvasEl;
+    toolbarEl;
+    brushEl;
+    colorPickerEl;
+    brushPannelEl;
+    brushSize;
+    brushSizePreviewEl;
+    eraserEl;
+    navigatorEl;
+    navigatorImageContainerEl;
+    navigatorImageEl;
+    undoEl;
+    clearEl;
+    downloadLinkEl;
     constructor(){
         this.assignElement();
         this.initContext();
