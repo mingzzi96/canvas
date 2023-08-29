@@ -42,11 +42,13 @@ class DrawingBoard {
         this.navigatorEl.addEventListener("click", this.onClickNavigator.bind(this));
     }
     onClickNavigator(event) {
+        this.isNavigatorVisible = !event.currentTarget.classList.contains("active");
         event.currentTarget.classList.toggle("active");
         this.navigatorImageContainerEl.classList.toggle("hide");
         this.updateNavigator();
     }
     updateNavigator() {
+        if (!this.isNavigatorVisible) return;
         this.navigatorImageEl.src = this.canvasEl.toDataURL();
     }
     onClickEraser(event) {
